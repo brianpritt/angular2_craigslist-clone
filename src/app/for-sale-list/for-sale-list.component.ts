@@ -13,6 +13,7 @@ export class ForSaleListComponent {
   @Output() deleteClickSender = new EventEmitter();
   @Output() individualPageClickSender = new EventEmitter();
   selectedPost = null;
+  @Output() markedAsFavorite = new EventEmitter();
 
   showDetails(clickedPost) {
     if (this.selectedPost) {
@@ -31,5 +32,8 @@ export class ForSaleListComponent {
 
   goToDetailPage(clickedPost: ForSale) {
     this.individualPageClickSender.emit(clickedPost);
+  }
+  markFavorite(favoritedPost: ForSale){
+    this.markedAsFavorite.emit(favoritedPost);
   }
 }

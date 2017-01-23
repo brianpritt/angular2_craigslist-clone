@@ -5,7 +5,9 @@
 </div>
 <ul *ngFor="let forSalePost of childForSaleList">
   <li (click)="showDetails(forSalePost)">{{forSalePost.title}}</li>
+  <p *ngIf="forSalePost.favorite">Favorite</p>
   <button class="btn" (click)="editForSale(forSalePost)">Edit</button>
   <button class="btn" (click)="deleteForSale(forSalePost)">Delete</button>
   <button class="btn" (click)="goToDetailPage(forSalePost)">Go to Details Page</button>
+  <button class="btn" (click)="markFavorite(forSalePost)">Favorite</button>
 </ul>

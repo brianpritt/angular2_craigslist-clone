@@ -44,4 +44,11 @@ export class ForSaleComponent implements OnInit {
   goToDetailPage(clickedPost) {
     this.router.navigate(['for-sale', clickedPost.id]);
   }
+  markedAsFavorite(favoritedPost){
+    if(favoritedPost.favorite === false){
+    favoritedPost.favorite = true;
+  }else{
+    favoritedPost.favorite = false;
+  }
+  }
 }
