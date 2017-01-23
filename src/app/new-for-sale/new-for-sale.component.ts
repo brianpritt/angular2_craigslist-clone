@@ -7,9 +7,11 @@ import { ForSale } from '../for-sale.model';
 })
 export class NewForSaleComponent {
   @Input() childNewPosting: ForSale;
+  @Input() childForSaleList: ForSale[];
   @Output() newForSaleSender = new EventEmitter();
 
-  submitForm(title: string, content: string, image: string, author: string, id: number){
+  submitForm(title: string, content: string, image: string, author: string){
+    var id: number = this.childForSaleList.length + 1;
     var newForSale: ForSale = new ForSale(title, content, image, author, id);
     this.newForSaleSender.emit(newForSale);
   }
