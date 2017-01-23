@@ -14,6 +14,7 @@ import { ServicesComponent } from './services/services.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { CommunityListComponent } from './community-list/community-list.component';
 import { ForSaleListComponent } from './for-sale-list/for-sale-list.component';
+import { EditForSaleComponent } from './edit-for-sale/edit-for-sale.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ForSaleListComponent } from './for-sale-list/for-sale-list.component';
     ServicesComponent,
     JobsComponent,
     CommunityListComponent,
-    ForSaleListComponent
+    ForSaleListComponent,
+    EditForSaleComponent
   ],
   imports: [
     BrowserModule,

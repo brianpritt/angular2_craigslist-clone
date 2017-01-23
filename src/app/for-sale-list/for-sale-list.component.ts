@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ForSale } from '../for-sale.model';
 
 @Component({
@@ -8,6 +8,7 @@ import { ForSale } from '../for-sale.model';
 })
 export class ForSaleListComponent {
   @Input() childForSaleList: ForSale[];
+  @Output() clickSender = new EventEmitter();
   selectedPost = null;
 
   showDetails(clickedPost) {
@@ -16,5 +17,8 @@ export class ForSaleListComponent {
     } else {
       this.selectedPost = clickedPost;
     }
+  }
+  editForSale(postToEdit: ForSale){
+    this.clickSender.emit(postToEdit);
   }
 }

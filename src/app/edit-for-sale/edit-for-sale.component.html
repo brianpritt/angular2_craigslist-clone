@@ -1,0 +1,12 @@
+<div *ngIf="childPostToEdit">
+  <h5>Edit</h5>
+  <label>Title:</label>
+  <input [(ngModel)]="childPostToEdit.title">
+  <label>Content:</label>
+  <input [(ngModel)]="childPostToEdit.content">
+  <label>Image Link:</label>
+  <input [(ngModel)]="childPostToEdit.img">
+  <label>Author</label>
+  <input [(ngModel)]="childPostToEdit.author">
+  <button class="btn" (click)="doneEditing()">button</button>
+</div>

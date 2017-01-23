@@ -5,4 +5,5 @@
 </div>
 <ul *ngFor="let forSalePost of childForSaleList">
   <li (click)="showDetails(forSalePost)">{{forSalePost.title}}</li>
+  <button (click)="editForSale(forSalePost)">Edit</button>
 </ul>
