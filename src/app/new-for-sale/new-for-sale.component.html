@@ -1,0 +1,11 @@
+<div *ngIf="childNewPosting">
+  <label>Title: </label>
+  <input #newTitle>
+  <label>Content: </label>
+  <input #newContent>
+  <label>Image url: </label>
+  <input #newImage>
+  <label>Author: </label>
+  <input #newAuthor>
+  <button class="btn" (click)="submitForm(newTitle.value, newContent.value, newImage.value, newAuthor.value);newTitle.value = '';newContent.value = ''; newImage.value = ''; newAuthor.value = '';">Add</button>
+</div>

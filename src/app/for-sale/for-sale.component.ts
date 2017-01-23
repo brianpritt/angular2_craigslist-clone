@@ -12,6 +12,7 @@ export class ForSaleComponent {
     new ForSale("Buck Fieldmate Survival Knife", "Vintage Buck Fieldmate Survival Knife. I bought it new when I was 12 and I've had it for 25 years. This is a great knife that has been used very little and it is in excellent condition. Asking $60 cash only please.", "https://images.craigslist.org/00k0k_32Qg1oHXnS_600x450.jpg", "knifeykniferson")
   ]
   postToEdit = null;
+  newPosting = null;
 
   editPost(clickedPost){
     this.postToEdit = clickedPost;
@@ -19,5 +20,12 @@ export class ForSaleComponent {
 
   doneEditing() {
     this.postToEdit = null;
+  }
+  addPostFormShow(){
+    this.newPosting = true;
+  }
+  newForSale(newPost){
+    this.masterForSaleList.push(newPost);
+    this.newPosting = null;
   }
 }
