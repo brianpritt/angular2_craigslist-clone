@@ -1,3 +1,8 @@
-<ul>
-  <li *ngFor="let forSalePost of childForSaleList">{{forSalePost.title}}</li>
+<div *ngIf="selectedPost">
+  <p>{{selectedPost.content}}</p>
+  <p>{{selectedPost.author}}</p>
+  <img src={{selectedPost.img}}>
+</div>
+<ul *ngFor="let forSalePost of childForSaleList">
+  <li (click)="showDetails(forSalePost)">{{forSalePost.title}}</li>
 </ul>

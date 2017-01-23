@@ -8,5 +8,9 @@ import { ForSale } from '../for-sale.model';
 })
 export class ForSaleListComponent {
   @Input() childForSaleList: ForSale[];
+  selectedPost = null;
 
+  showDetails(clickedPost) {
+    this.selectedPost = clickedPost;
+  }
 }
