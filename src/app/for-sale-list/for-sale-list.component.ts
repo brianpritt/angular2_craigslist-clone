@@ -11,6 +11,10 @@ export class ForSaleListComponent {
   selectedPost = null;
 
   showDetails(clickedPost) {
-    this.selectedPost = clickedPost;
+    if (this.selectedPost) {
+      this.selectedPost = null;
+    } else {
+      this.selectedPost = clickedPost;
+    }
   }
 }
