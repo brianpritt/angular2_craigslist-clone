@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ForSale } from '../for-sale.model';
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'for-sale-list',
@@ -11,9 +11,8 @@ export class ForSaleListComponent {
   @Input() childForSaleList: ForSale[];
   @Output() clickSender = new EventEmitter();
   @Output() deleteClickSender = new EventEmitter();
+  @Output() individualPageClickSender = new EventEmitter();
   selectedPost = null;
-
-  constructor(private router: Router){}
 
   showDetails(clickedPost) {
     if (this.selectedPost) {
@@ -31,6 +30,6 @@ export class ForSaleListComponent {
   }
 
   goToDetailPage(clickedPost: ForSale) {
-    this.router.navigate(['for-sale', clickedPost.id]);
+    this.individualPageClickSender.emit(clickedPost);
   }
 }

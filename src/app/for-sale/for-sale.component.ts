@@ -1,16 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ForSale } from '../for-sale.model';
+import { ForSaleService } from '../for-sale.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-for-sale',
   templateUrl: './for-sale.component.html',
-  styleUrls: ['./for-sale.component.css']
+  styleUrls: ['./for-sale.component.css'],
+  providers: [ForSaleService]
 })
-export class ForSaleComponent {
-  masterForSaleList: ForSale[] = [
-    new ForSale("Nascar Wheel and Tire", " For you NSCAR fans - Just what you need for your shop or the Man Cave", "https://images.craigslist.org/00f0f_iKbjMVXbpYP_600x450.jpg", "nascarfan123", 1),
-    new ForSale("Buck Fieldmate Survival Knife", "Vintage Buck Fieldmate Survival Knife. I bought it new when I was 12 and I've had it for 25 years. This is a great knife that has been used very little and it is in excellent condition. Asking $60 cash only please.", "https://images.craigslist.org/00k0k_32Qg1oHXnS_600x450.jpg", "knifeykniferson", 2)
-  ];
+export class ForSaleComponent implements OnInit {
+  masterForSaleList: ForSale[];
+
+  constructor(private router: Router, private forSaleService: ForSaleService){}
+
+  ngOnInit() {
+    this.masterForSaleList = this.forSaleService.getForSale();
+  }
+
   postToEdit = null;
   newPosting = null;
 
@@ -32,5 +39,9 @@ export class ForSaleComponent {
   deletePost(postToDelete) {
     var index = this.masterForSaleList.indexOf(postToDelete);
     this.masterForSaleList.splice(index, 1);
+  }
+
+  goToDetailPage(clickedPost) {
+    this.router.navigate(['for-sale', clickedPost.id]);
   }
 }
