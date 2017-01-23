@@ -1,5 +1,5 @@
 <h3>For Sale</h3>
-<for-sale-list [childForSaleList]="masterForSaleList" (clickSender)="editPost($event)"></for-sale-list>
+<for-sale-list [childForSaleList]="masterForSaleList" (clickSender)="editPost($event)" (deleteClickSender)=deletePost($event)></for-sale-list>
 <button (click)="addPostFormShow()">New Posting</button>
 <new-for-sale [childNewPosting]="newPosting" (newForSaleSender)="newForSale($event)"></new-for-sale>
 <edit-for-sale [childPostToEdit]="postToEdit" (doneEditingSender)="doneEditing()"></edit-for-sale>

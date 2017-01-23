@@ -9,6 +9,7 @@ import { ForSale } from '../for-sale.model';
 export class ForSaleListComponent {
   @Input() childForSaleList: ForSale[];
   @Output() clickSender = new EventEmitter();
+  @Output() deleteClickSender = new EventEmitter();
   selectedPost = null;
 
   showDetails(clickedPost) {
@@ -20,5 +21,9 @@ export class ForSaleListComponent {
   }
   editForSale(postToEdit: ForSale){
     this.clickSender.emit(postToEdit);
+  }
+
+  deleteForSale(postToDelete: ForSale) {
+    this.deleteClickSender.emit(postToDelete)
   }
 }

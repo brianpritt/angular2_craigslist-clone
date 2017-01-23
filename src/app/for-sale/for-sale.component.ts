@@ -28,4 +28,9 @@ export class ForSaleComponent {
     this.masterForSaleList.push(newPost);
     this.newPosting = null;
   }
+
+  deletePost(postToDelete) {
+    var index = this.masterForSaleList.indexOf(postToDelete);
+    this.masterForSaleList.splice(index, 1);
+  }
 }
