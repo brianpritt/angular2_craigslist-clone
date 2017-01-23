@@ -12,6 +12,7 @@ import { HousingComponent } from './housing/housing.component';
 import { ForSaleComponent } from './for-sale/for-sale.component';
 import { ServicesComponent } from './services/services.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { CommunityListComponent } from './community-list/community-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { JobsComponent } from './jobs/jobs.component';
     HousingComponent,
     ForSaleComponent,
     ServicesComponent,
-    JobsComponent
+    JobsComponent,
+    CommunityListComponent
   ],
   imports: [
     BrowserModule,
