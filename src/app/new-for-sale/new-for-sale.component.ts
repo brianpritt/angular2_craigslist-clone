@@ -9,8 +9,8 @@ export class NewForSaleComponent {
   @Input() childNewPosting: ForSale;
   @Output() newForSaleSender = new EventEmitter();
 
-  submitForm(title: string, content: string, image: string, author: string){
-    var newForSale: ForSale = new ForSale(title, content, image, author);
+  submitForm(title: string, content: string, image: string, author: string, id: number){
+    var newForSale: ForSale = new ForSale(title, content, image, author, id);
     this.newForSaleSender.emit(newForSale);
   }
 }

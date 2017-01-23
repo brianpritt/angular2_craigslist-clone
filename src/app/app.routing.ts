@@ -7,6 +7,7 @@ import { HousingComponent } from './housing/housing.component';
 import { ForSaleComponent } from './for-sale/for-sale.component';
 import { ServicesComponent } from './services/services.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { ForSaleDetailComponent } from './for-sale-detail/for-sale-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -36,6 +37,10 @@ const appRoutes: Routes = [
   {
   path: 'jobs',
   component: JobsComponent
+},
+  {
+    path:'for-sale/:id',
+    component: ForSaleDetailComponent
   }
 ];
 

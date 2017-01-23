@@ -16,6 +16,7 @@ import { CommunityListComponent } from './community-list/community-list.componen
 import { ForSaleListComponent } from './for-sale-list/for-sale-list.component';
 import { EditForSaleComponent } from './edit-for-sale/edit-for-sale.component';
 import { NewForSaleComponent } from './new-for-sale/new-for-sale.component';
+import { ForSaleDetailComponent } from './for-sale-detail/for-sale-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NewForSaleComponent } from './new-for-sale/new-for-sale.component';
     CommunityListComponent,
     ForSaleListComponent,
     EditForSaleComponent,
-    NewForSaleComponent
+    NewForSaleComponent,
+    ForSaleDetailComponent
   ],
   imports: [
     BrowserModule,
