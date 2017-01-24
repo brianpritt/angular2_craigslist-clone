@@ -1,5 +1,18 @@
 <div class="container">
-  <a routerLink="">Main</a>
-  <h1>{{title}}</h1>
-  <router-outlet></router-outlet>
+  <div class="row">
+    <div class="col-sm-3 gray">
+      <h3 class="title" routerLink="">Cragslist</h3>
+    </div>
+    <div class="col-sm-9 gray">
+      <h1 class="title">{{title}}</h1>
+      <div class="col-sm-4">
+
+        <h4 class="header title">Stuff</h4>
+        <div class="categories">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

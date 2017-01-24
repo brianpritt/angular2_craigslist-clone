@@ -1,5 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
-body {
-  background-color: lightblue;
+.gray {
+  /*background-color: lightgray;*/
+  color: blue;
+}
+
+.categories {
+  background-color: white;
+  font-size: 14px;
+}
+
+.categories a {
+  border-bottom: 1px solid gray;
+}
+.title{
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: lightgrey;
 }
