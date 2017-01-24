@@ -17,6 +17,7 @@ import { ForSaleListComponent } from './for-sale-list/for-sale-list.component';
 import { EditForSaleComponent } from './edit-for-sale/edit-for-sale.component';
 import { NewForSaleComponent } from './new-for-sale/new-for-sale.component';
 import { ForSaleDetailComponent } from './for-sale-detail/for-sale-detail.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ForSaleDetailComponent } from './for-sale-detail/for-sale-detail.compon
     ForSaleListComponent,
     EditForSaleComponent,
     NewForSaleComponent,
-    ForSaleDetailComponent
+    ForSaleDetailComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
